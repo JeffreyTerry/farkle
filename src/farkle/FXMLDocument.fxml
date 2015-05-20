@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farkle.FXMLDocumentController">
+   <children>
+      <BorderPane>
+         <right>
+            <ListView fx:id="scoreboard" prefWidth="200.0" />
+         </right>
+         <center>
+            <GridPane vgap="40.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="main_button" mnemonicParsing="false" onAction="#rollDice" prefHeight="44.0" prefWidth="149.0" text="Roll" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#endTurn" prefHeight="39.0" prefWidth="129.0" text="End turn" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                  <ImageView fx:id="dice_six" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dice_one" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dice_two" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dice_three" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dice_four" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dice_five" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../imgs/7.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="main_label" prefHeight="28.0" prefWidth="589.0" text="Welcome to Farkle! Roll to begin." GridPane.columnSpan="6">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#clickAllDice" prefHeight="39.0" prefWidth="129.0" text="Save all" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </center>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>
